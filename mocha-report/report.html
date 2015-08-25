@@ -1,0 +1,162 @@
+<html><head>
+	<title>Test Report</title>
+	<style type="text/css">
+		/* general */
+		body {
+			background-color: SeaShell;
+			min-width: 1000px;
+		}
+
+		div#reportTable {
+			margin-left: auto; 
+			margin-right: auto;
+			width: 90%;
+			border: 5px ridge #E3EAF2;
+		}
+		
+		table {
+			width: 100%;
+			border-collapse: collapse;   
+			background-color: #E7EDF5; 
+			table-layout: fixed;
+		}
+		td {
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+			word-break: break-word;
+		}
+
+		.expanded {
+			background-repeat: no-repeat;
+			width: 16;
+			height: 16;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFeXl53d3dmpqasbGx////GU0iEgAAAAV0Uk5T/////wD7tg5TAAAAK0lEQVQI12NwgQIG0hhCDAwMTCJAhqMCA4MiWEoIJABiOCooQhULi5BqMgB2bh4svs8t+QAAAABJRU5ErkJggg==');
+		}
+
+		.collapsed {
+			background-repeat: no-repeat;
+			width: 16;
+			height: 16;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAPUExURXl5ed3d3ZqamrGxsf///xlNIhIAAAAFdFJOU/////8A+7YOUwAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAvSURBVBjTY3CBAlSGI4whBGU4KkAZQgwQhqMClOHMgC4CV4PQBTcHYbILFoaLCwCrIB7+CSEIHAAAAABJRU5ErkJggg==');
+		}
+
+		.indent {
+			width: 20px;
+		}
+
+		/* suite */
+		.suite {
+			border-bottom: 4px ridge gray;
+		}
+
+		.subTotal {
+			width: 80px;
+			font-weight: bold;
+		}
+
+
+		/* tests */
+		.title  {
+			width: auto;		
+		}
+
+		.duration {
+			width: 90px;
+		}
+
+		.durationPorP {
+			padding-left: 17px;
+			width: 90px;
+		}
+
+		.passedState, .failedState, .pendingState {
+			color: white;
+			text-align: center;
+			width: 60px; 
+		}
+
+		.passedState {
+			background-color: DarkGreen; 
+		}
+		.failedState { 
+			background-color: DarkRed;  
+		}
+		.pendingState { 
+			background-color: DarkBlue; 
+		}
+
+		.passed {
+			background-color: #7EDF9F;
+		}
+		.failed {
+			background-color: #E0A7A7;
+		}
+
+		.pending {
+			background-color: lightblue;
+		}
+
+		.failDetail .passDetail {
+			width: auto; 
+			word-wrap: normal;
+		}
+
+		/* other */
+		.totalsLeft {
+			width: 200px;
+			height: 100px;
+			margin-left: 5%;
+			padding-top: 20px;
+			padding-left:5px;
+			font-weight: bold;
+			float:left;
+		}
+
+		.totalsRight {
+			text-align:center;
+			line-height: 50px;
+			color: white;
+			font-weight: bold;
+			overflow: hidden;
+			
+			height: 50px;
+			margin-right: 5%;
+			margin-top: 20px;
+			padding-top: 20px;
+			float:right;
+		}
+
+		.innerDiv {
+			border:none;
+		}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var showHide = function(id,pid) { 
+			var element = $("."+id); 
+			var pelement = $("."+pid);
+			var imageTD = pelement.filter('#'+id).find('#image');
+
+			if (pelement.css("display") == "none") { 
+				element.toggle(false);
+				imageTD.attr('class', 'collapsed');
+				element.click(); 
+			} else { 
+				element.toggle();
+				if (element.css("display") == "none") {
+					imageTD.attr('class', 'collapsed');
+					element.click();
+				} else {
+					imageTD.attr('class', 'expanded');
+				}
+			}
+		}
+
+		window.onload = function() {
+			$(".failed").click();
+			$(".passlog").click();
+		}
+	</script>
+</head><body><div style="height:120px;"><div class="totalsLeft"><div class="innerDiv" style="color: black">Run Time: 0d 0:0:0:23</div><div class="innerDiv">Total: 2</div><div class="innerDiv" style="color: DarkGreen;">Passed: 2</div><div class="innerDiv" style="color: DarkRed;">Failed: 0</div><div class="innerDiv" style="color: DarkBlue;">Pending: 0</div></div><div class="totalsRight" style="width: 695px;"><div class="innerDiv" style="width:695px; background-color: DarkGreen; height:50px; float:left;">100%</div><div class="innerDiv" style="width:0px; background-color: DarkRed; height:50px; float:left;">0%</div><div class="innerDiv" style="width:0px; background-color: DarkBlue; height:50px; float:left;">0%</div></div></div><div id="reportTable"><table cellspacing="0" cellpadding="0"><tr id="92a721de-9002-2833-887a-976f501c48d5-c20b" onclick="showHide('92a721de-9002-2833-887a-976f501c48d5-c20b', '976c5a2f-5f07-0bcc-26cb-0335f4e6960a-e412')" class="976c5a2f-5f07-0bcc-26cb-0335f4e6960a-e412 suite"><td id="image" class="expanded"></td><td class="title">SAMPLE unit test</td><td class="subTotal" style="color: DarkGreen;">Pass: 2</td><td class="subTotal" style="color: DarkRed;">Fail: 0</td><td class="subTotal" style="color: DarkBlue;">Pend: 0</td><td class="subTotal" style="color: black; width: 120px;">0d 0:0:0:23</td></tr></table><table cellspacing="0" cellpadding="0"><tr class="92a721de-9002-2833-887a-976f501c48d5-c20b passed" ><td style="background-color: rgb(56,56,56);" class="indent"></td><td class="durationPorP">15 ms</td><td class="title">post method</td><td class="passedState">Passed</td></tr></table><table cellspacing="0" cellpadding="0"><tr class="92a721de-9002-2833-887a-976f501c48d5-c20b passed" ><td style="background-color: rgb(56,56,56);" class="indent"></td><td class="durationPorP">8 ms</td><td class="title">get method</td><td class="passedState">Passed</td></tr></table></div></body></html>

@@ -1,0 +1,51 @@
+{
+  "name": "POC",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.12.0",
+    "cookie-parser": "~1.3.4",
+    "debug": "~2.1.1",
+    "express": "~4.12.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "jade": "~1.9.2",
+    "mongoose": "^4.0.3",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0",
+    "stylus": "0.42.3"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "expect": "^1.6.0",
+    "good-mocha-html-reporter": "^1.6.5",
+    "grunt": "^0.4.5",
+    "grunt-istanbul": "^0.5.0",
+    "grunt-istanbul-coverage": "^0.1.1",
+    "grunt-run": "^0.3.0",
+    "grunt-sonar-runner": "^2.4.3",
+    "gulf": "^1.1.2",
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jshint-html-reporter": "^0.1.3",
+    "gulp-mocha": "^2.1.3",
+    "gulp-nodemon": "^2.0.4",
+    "istanbul": "^0.3.18",
+    "jshint": "^2.8.0",
+    "jshint-html-reporter": "^0.2.4",
+    "mocha": "^2.2.1",
+    "mocha-lcov-reporter": "0.0.2",
+    "mongoose": "^4.1.3",
+    "nodemon": "^1.4.1",
+    "should": "^7.0.4",
+    "superagent": "^1.1.0",
+    "supertest": "^0.15.0"
+  }
+}
