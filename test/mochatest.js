@@ -24,6 +24,8 @@ describe("SAMPLE unit test",function(){
       // Error key should be false.
      // res.body.error.should.equal(false);
       done();
+    }).catch(error => { 
+                done(error);
     });
   });
 
@@ -41,6 +43,8 @@ describe("SAMPLE unit test",function(){
       // Error key should be false.
      // res.body.error.should.equal(false);
       done();
+    }).catch(error => { 
+                done(error);
     });
   });
 });
