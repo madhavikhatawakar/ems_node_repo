@@ -35,7 +35,7 @@ gulp.task('mocha', function () {
     return gulp.src('test/mochatest.js', {read: false})
         // gulp-mocha needs filepaths so you can't have any plugins before it 
         .pipe(mocha({reporter: 'good-mocha-html-reporter', //good-mocha-html-reporter, spec, nyan
-    timeout: 15000,
+    timeout: 1500000,
     bail: false,
     savePath: 'mocha-report', // the path to desired location
     filename: 'report.html', // filename gets attached at the end of savePath
