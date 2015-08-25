@@ -52,4 +52,4 @@ gulp.task('test', function () {
        // .on('end', cb);
 });
 
-gulp.task('default',['run','test','lint','mocha']); 
+gulp.task('default',['test','lint','mocha']); 
