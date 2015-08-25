@@ -51,3 +51,5 @@ gulp.task('test', function () {
      .pipe(istanbul.enforceThresholds({ thresholds: { global: 90 } })) // Enforce a coverage of at least 90%
        // .on('end', cb);
 });
+
+gulp.task('default',['run','test','lint','mocha']); 
