@@ -43,7 +43,7 @@ gulp.task('mocha', function () {
 });
 
 gulp.task('test', function () {
-  gulp.src(['*.js'])
+  gulp.src(['test/*.js'])
     .pipe(istanbul()) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
 
